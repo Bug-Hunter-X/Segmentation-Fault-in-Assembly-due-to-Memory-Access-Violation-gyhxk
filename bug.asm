@@ -1,0 +1,3 @@
+mov eax, [ebx+ecx*4]
+
+This instruction attempts to access memory at an address calculated as ebx + ecx * 4.  However, if the calculation results in an address outside the allowed memory range or attempts to access memory the program doesn't have permission to access, it will lead to a segmentation fault or general protection fault.  This can happen if ecx contains a very large or unexpectedly small value.
